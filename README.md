@@ -9,20 +9,20 @@
 
 ##  Table of Contents
 
-1. [Project Overview](#-project-overview)
-2. [Business Problem & Objectives](#-business-problem--objectives)
-3. [Dataset](#-dataset)
-4. [Tech Stack](#-tech-stack)
-5. [Architecture](#-architecture)
-6. [Data Warehouse Design (Schema)](#-data-warehouse-design-schema)
-7. [ETL Pipeline](#-etl-pipeline)
-8. [Data Storage Evaluation](#-data-storage-evaluation)
-9.  [Risk Management & Data Quality](#-risk-management--data-quality)
-10.   [Dashboard, Key Insights & Recommendations](#-dashboard-key-insights--recommendations)
-11.   [SQL Skills Showcase](#-sql-skills-showcase)
-12.   [DAX Measures Showcase](#-dax-measures-showcase)
-13.   [Repository Structure](#-repository-structure)
-14.   [How to Run This Project](#-how-to-run-this-project)
+1. [Project Overview](#project-overview)
+2. [Business Problem & Objectives](#business-problem--objectives)
+3. [Dataset](#dataset)
+4. [Tech Stack](#tech-stack)
+5. [Architecture](#architecture)
+6. [Data Warehouse Design (Schema)](#data-warehouse-design-schema)
+7. [ETL Pipeline](#etl-pipeline)
+8. [Data Storage Evaluation](#data-storage-evaluation)
+9.  [Risk Management & Data Quality](#risk-management--data-quality)
+10.   [Dashboard, Key Insights & Recommendations](#dashboard-key-insights--recommendations)
+11.   [SQL Skills Showcase](#sql-skills-showcase)
+12.   [DAX Measures Showcase](#dax-measures-showcase)
+13.   [Repository Structure](#repository-structure)
+14.   [How to Run This Project](#how-to-run-this-project)
 ---
 
 ## Project Overview
