@@ -25,7 +25,7 @@
 14. [How to Run This Project](#-how-to-run-this-project)
 ---
 
-##  Project Overview
+## Project Overview
 
 Olist, Brazil's largest online marketplace connector, generates order, payment, review, and logistics data across thousands of sellers and customers  but raw transactional CSVs give leadership no way to see revenue trends, regional performance, or *why* delivery delays hurt customer satisfaction.
 
@@ -41,9 +41,15 @@ The result: raw transactional data converted into **stakeholder-ready insights**
 
 ---
 
-##  Business Problem & Objectives
+## Business Problem & Objectives
+This project addresses e-commerce analytics challenges using the Olist dataset, supporting evidence-based decision-making.
 
-**Business question:** *Where is Olist's e-commerce revenue concentrated, what is driving customer dissatisfaction, and how should logistics, marketing, and payments strategy respond?*
+**Business question:** 
+Q 1. Where is Olist's e-commerce revenue concentrated?
+
+Q.2 What is driving customer dissatisfaction?
+
+Q.3 How should logistics, marketing, and payments strategy respond?
 
 **Target audience:** CEO/COO/Investors (executive summary), Marketing, Customer Support, Sales, Supply Chain, and Seller Relations teams  each served by a dedicated dashboard tab.
 
@@ -57,7 +63,7 @@ The result: raw transactional data converted into **stakeholder-ready insights**
 
 ---
 
-##  Dataset
+## Dataset
 
 **[Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)** (Kaggle)
 
@@ -70,7 +76,7 @@ The result: raw transactional data converted into **stakeholder-ready insights**
 | Why it fits | Full e-commerce lifecycle (order → payment → logistics → review) enables realistic sales trend, regional clustering, and delivery-satisfaction analysis |
 
 ---
-##  Tech Stack
+## Tech Stack
 
 | Layer | Tools |
 |---|---|
@@ -83,7 +89,7 @@ The result: raw transactional data converted into **stakeholder-ready insights**
 
 ---
 
-##  Architecture
+## Architecture
 
 ```mermaid
 flowchart TD
@@ -107,7 +113,7 @@ Full flowchart (source doc): [`ETL_Flowchart.pdf`](ETL_Flowchart.pdf)
 
 ---
 
-##  Data Warehouse Design (Schema)
+## Data Warehouse Design (Schema)
 
 A **snowflake schema** was implemented in Snowflake  chosen over a flat star schema to normalize dimensions (e.g. product ↔ category translation) and enforce referential integrity across a genuinely relational source dataset.
 
@@ -189,7 +195,7 @@ Full ER diagram (source doc): [`ER_Diagram.pdf`](ER_Diagram.pdf)
 
 ---
 
-##  ETL Pipeline
+## ETL Pipeline
 
 Implemented in Python (Pandas), fully modular and independently runnable (see [`2_ETL_Code/Python_Code`](2_ETL_Code/Python_Code)):
 
@@ -214,7 +220,7 @@ Full write-up of every issue found and how it was resolved: [`Data Quality Issue
 
 ---
 
-##  Data Storage Evaluation
+## Data Storage Evaluation
 
 Three storage architectures were formally evaluated against **scalability, integrity risk, security risk, and cost** before selecting Snowflake:
 
@@ -228,7 +234,7 @@ Snowflake was selected for its elastic compute/storage separation, SQL-native ac
 
 ---
 
-##  Risk Management & Data Quality
+## Risk Management & Data Quality
 
 | Risk | Mitigation | Result |
 |---|---|---|
@@ -240,7 +246,7 @@ Snowflake was selected for its elastic compute/storage separation, SQL-native ac
 
 ---
 
-##  Dashboard, Key Insights & Recommendations
+## Dashboard, Key Insights & Recommendations
 
 Live Power BI dashboard connected directly to Snowflake (`.pbit` file: [`3_Dashboard/MBI807_Assignment_1_Sneha.pbit`](3_Dashboard/MBI807_Assignment_1_Sneha.pbit)), organized into **6 stakeholder-specific tabs**: Executive Summary, Customer & Order, Payment, Delivery, Product, and Seller.
 
@@ -278,7 +284,7 @@ Break down order status, payment-type mix, and  critically  the **relationship b
 
 ---
 
-##  SQL
+## SQL
 
 From the warehouse created two  SQL views Power BI always queries consistent, pre-aggregated business logic instead of re-deriving it per-report.
 
@@ -344,7 +350,7 @@ Full source: [`2_ETL_Code/SQL_Code`](2_ETL_Code/SQL_Code)
 
 ---
 
-##  DAX Measures
+## DAX Measures
 
 Power BI semantic model defines its own measure layer in DAX  so every KPI on the dashboard (GMV, AOV, on-time rate, active sellers, etc.) is computed consistently from a single defined measure rather than recalculated per visual.
 
@@ -390,7 +396,7 @@ Full model: [`3_Dashboard/MBI807_Assignment_1_Sneha.pbit`](3_Dashboard/MBI807_As
 
 ---
 
-##  Repository Structure
+## Repository Structure
 
 ```
 OLIST_Ecommerce_BI_DW_Solution/
@@ -430,7 +436,7 @@ OLIST_Ecommerce_BI_DW_Solution/
 
 ---
 
-##  How to Run This Project
+## How to Run This Project
 
 **1. Clone the repository**
 ```bash
